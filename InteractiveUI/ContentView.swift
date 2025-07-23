@@ -13,7 +13,7 @@ struct ContentView: View {
     
     var body: some View {
         VStack {
-            Text("What is your name?")
+            Text(textTitle)
                 .font(.title)
                 .fontWeight(.bold)
             TextField("Enter your name here", text: $name)
@@ -22,7 +22,8 @@ struct ContentView: View {
                 .border(Color.gray, width:1)
         //add a button
             Button("Submit Name"){
-
+                print(name)
+                textTitle = "Welcome, " + name + "!"
             }
             .font(.title2)
             .tint(.gray)
